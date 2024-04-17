@@ -1,40 +1,230 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Запись алгоритмов</h1>
+        </section>
+        <section>
+          <h3>Алгоритмы</h3>
+          <p>
+            Алгоритм - последовательность действий, которые нужно выполнить,
+            чтобы получить определённый результат.
+          </p>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+          <h3>Алгоритмы</h3>
+          <ul style="display: grid; grid-template-columns: repeat(2, 1fr)">
+            <li>конечность</li>
+            <li>определённость</li>
+            <li>наличие ввода</li>
+            <li>результативность</li>
+            <li>универсальность</li>
+            <li>эффективность</li>
+          </ul>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+          <h2>Задача</h2>
+          <img src="assets/task-example.png" style="width: 20vw" alt="" />
+        </section>
+
+        <section>
+          <section>
+            <h2>Формы записей алгоритмов</h2>
+            <ul>
+              <li>Текстом</li>
+            </ul>
+          </section>
+          <section>
+            <img src="assets/task-example.png" style="width: 20vw" alt="" />
+            <pre><code data-trim data-noescape>
+							Иди прямо 2 клетки, повернись налево, сделай 1 шаг
+						</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Формы записей алгоритмов</h2>
+            <ul>
+              <li style="color: #777">Текстом</li>
+              <li>Блок-схема</li>
+            </ul>
+          </section>
+          <section>
+            <div
+              class="r-stretch"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2vw;
+              "
+            >
+              <img src="assets/task-example.png" style="width: 20vw" alt="" />
+              <img src="assets/block-scheme.png" style="width: 20vw" alt="" />
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Формы записей алгоритмов</h2>
+            <ul>
+              <li style="color: #777">Текстом</li>
+              <li style="color: #777">Блок-схема</li>
+              <li>Псевдокод</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Синтаксис</h2>
+            <p>
+              набор правил, определяющих корректное оформление и структуру кода,
+              необходимое для написания алгоритмов
+            </p>
+            <h2>Правила</h2>
+            <ul>
+              <li>Идти</li>
+              <li>Повернуться налево</li>
+            </ul>
+          </section>
+          <section>
+            <img src="assets/task-example.png" style="width: 20vw" alt="" />
+            <pre><code data-trim data-noescape data-line-numbers>
+							Идти;
+							Идти;
+							Повернуться налево;
+							Идти;
+						</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Формы записей алгоритмов</h2>
+            <ul>
+              <li style="color: #777">Текстом</li>
+              <li style="color: #777">Блок-схема</li>
+              <li style="color: #777">Псевдокод</li>
+              <li>Визуальные языки программирования</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Блоки</h2>
+            <div>
+              <div>
+                <img src="assets/move.png" alt="" />
+                <p>Шаг вперед</p>
+              </div>
+              <div>
+                <img src="assets/turn.png" alt="" />
+                <p>Повернуться против часовой</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <img src="assets/task-example.png" style="width: 20vw" alt="" />
+            <div>
+              <img src="assets/move.png" alt="" />
+              <img src="assets/move.png" alt="" />
+              <img src="assets/turn.png" alt="" />
+              <img src="assets/move.png" alt="" />
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Формы записей алгоритмов</h2>
+            <ul>
+              <li style="color: #777">Текстом</li>
+              <li style="color: #777">Блок-схема</li>
+              <li style="color: #777">Псевдокод</li>
+              <li style="color: #777">Визуальные языки программирования</li>
+              <li>Языки программирования</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Функции</h2>
+            <p>отдельный блок программы, который выполняет одно конкретное действие</p>
+          </section>
+          <section>
+            <h2>Python функции</h2>
+            <ul>
+              <li>move() - движение прямо</li>
+              <li>turn_left() - поворот налево или против часовой стрелки</li>
+            </ul>
+          </section>
+          <section>
+            <img src="assets/task-example.png" style="width: 20vw" alt="" />
+            <pre><code data-trim data-noescape data-line-numbers>
+							move()
+							move()
+							turn_left()
+							move()
+						</code></pre>
+          </section>
+          <section>
+            <h2>Возможности Reeborg:</h2>
+            <small>
+              <ul
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  gap: 1vw;
+                "
+              >
+                <li>
+                  Весь функционал Python (циклы, функции, логические выражения)
+                </li>
+                <li>Встроенные функции по кнопке "Reeborg's Keyboard"</li>
+              </ul>
+            </small>
+            <pre><code data-trim data-noescape data-line-numbers>
+							// Пример функции
+							def turn_right():
+								turn_left()
+								turn_left()
+								turn_left()
+
+							turn_right()
+						</code></pre>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      })
+    </script>
+  </body>
 </html>
